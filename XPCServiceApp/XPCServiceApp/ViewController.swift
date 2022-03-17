@@ -9,18 +9,17 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var outputLabel: NSTextField!
+    @IBOutlet weak var textField: NSTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
+    @IBAction func changeUppercase(_ sender: Any) {
+        UppercaseUtility.uppercase(textField.stringValue) { text in
+            DispatchQueue.main.async {
+                self.outputLabel.stringValue = text
+            }
         }
     }
-
-
 }
 

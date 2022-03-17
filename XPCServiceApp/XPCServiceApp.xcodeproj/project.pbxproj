@@ -11,7 +11,37 @@
 		FF0C9C0227E0DB20009D9818 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C9C0127E0DB20009D9818 /* ViewController.swift */; };
 		FF0C9C0427E0DB21009D9818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0C9C0327E0DB21009D9818 /* Assets.xcassets */; };
 		FF0C9C0727E0DB21009D9818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0C9C0527E0DB21009D9818 /* Main.storyboard */; };
+		FF0C9C1727E0DB92009D9818 /* TextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C9C1627E0DB92009D9818 /* TextService.swift */; };
+		FF0C9C1927E0DB92009D9818 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C9C1827E0DB92009D9818 /* main.swift */; };
+		FF0C9C1D27E0DB92009D9818 /* TextService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = FF0C9C1227E0DB92009D9818 /* TextService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FF41057227E38555009BD8D2 /* TextServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C9C1527E0DB92009D9818 /* TextServiceDelegate.swift */; };
+		FF41057327E38558009BD8D2 /* TextServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C9C1427E0DB92009D9818 /* TextServiceProtocol.swift */; };
+		FF41057527E38DA5009BD8D2 /* UppercaseUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41057427E38DA5009BD8D2 /* UppercaseUtility.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF0C9C1B27E0DB92009D9818 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF0C9BF427E0DB20009D9818 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF0C9C1127E0DB92009D9818;
+			remoteInfo = TextService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FF0C9C2127E0DB92009D9818 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				FF0C9C1D27E0DB92009D9818 /* TextService.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FF0C9BFC27E0DB20009D9818 /* XPCServiceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPCServiceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,10 +50,24 @@
 		FF0C9C0327E0DB21009D9818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF0C9C0627E0DB21009D9818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF0C9C0827E0DB21009D9818 /* XPCServiceApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPCServiceApp.entitlements; sourceTree = "<group>"; };
+		FF0C9C1227E0DB92009D9818 /* TextService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = TextService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0C9C1427E0DB92009D9818 /* TextServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextServiceProtocol.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FF0C9C1527E0DB92009D9818 /* TextServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextServiceDelegate.swift; sourceTree = "<group>"; };
+		FF0C9C1627E0DB92009D9818 /* TextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextService.swift; sourceTree = "<group>"; };
+		FF0C9C1827E0DB92009D9818 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FF0C9C1A27E0DB92009D9818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF41057427E38DA5009BD8D2 /* UppercaseUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UppercaseUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FF0C9BF927E0DB20009D9818 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF0C9C0F27E0DB92009D9818 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				FF0C9BFE27E0DB20009D9818 /* XPCServiceApp */,
+				FF0C9C1327E0DB92009D9818 /* TextService */,
 				FF0C9BFD27E0DB20009D9818 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				FF0C9BFC27E0DB20009D9818 /* XPCServiceApp.app */,
+				FF0C9C1227E0DB92009D9818 /* TextService.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,8 +103,21 @@
 				FF0C9C0327E0DB21009D9818 /* Assets.xcassets */,
 				FF0C9C0527E0DB21009D9818 /* Main.storyboard */,
 				FF0C9C0827E0DB21009D9818 /* XPCServiceApp.entitlements */,
+				FF41057427E38DA5009BD8D2 /* UppercaseUtility.swift */,
 			);
 			path = XPCServiceApp;
+			sourceTree = "<group>";
+		};
+		FF0C9C1327E0DB92009D9818 /* TextService */ = {
+			isa = PBXGroup;
+			children = (
+				FF0C9C1427E0DB92009D9818 /* TextServiceProtocol.swift */,
+				FF0C9C1527E0DB92009D9818 /* TextServiceDelegate.swift */,
+				FF0C9C1627E0DB92009D9818 /* TextService.swift */,
+				FF0C9C1827E0DB92009D9818 /* main.swift */,
+				FF0C9C1A27E0DB92009D9818 /* Info.plist */,
+			);
+			path = TextService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,15 +130,34 @@
 				FF0C9BF827E0DB20009D9818 /* Sources */,
 				FF0C9BF927E0DB20009D9818 /* Frameworks */,
 				FF0C9BFA27E0DB20009D9818 /* Resources */,
+				FF0C9C2127E0DB92009D9818 /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FF0C9C1C27E0DB92009D9818 /* PBXTargetDependency */,
 			);
 			name = XPCServiceApp;
 			productName = XPCServiceApp;
 			productReference = FF0C9BFC27E0DB20009D9818 /* XPCServiceApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FF0C9C1127E0DB92009D9818 /* TextService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF0C9C1E27E0DB92009D9818 /* Build configuration list for PBXNativeTarget "TextService" */;
+			buildPhases = (
+				FF0C9C0E27E0DB92009D9818 /* Sources */,
+				FF0C9C0F27E0DB92009D9818 /* Frameworks */,
+				FF0C9C1027E0DB92009D9818 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextService;
+			productName = TextService;
+			productReference = FF0C9C1227E0DB92009D9818 /* TextService.xpc */;
+			productType = "com.apple.product-type.xpc-service";
 		};
 /* End PBXNativeTarget section */
 
@@ -92,6 +170,9 @@
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					FF0C9BFB27E0DB20009D9818 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					FF0C9C1127E0DB92009D9818 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -110,6 +191,7 @@
 			projectRoot = "";
 			targets = (
 				FF0C9BFB27E0DB20009D9818 /* XPCServiceApp */,
+				FF0C9C1127E0DB92009D9818 /* TextService */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +206,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF0C9C1027E0DB92009D9818 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -132,11 +221,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF0C9C0227E0DB20009D9818 /* ViewController.swift in Sources */,
+				FF41057527E38DA5009BD8D2 /* UppercaseUtility.swift in Sources */,
 				FF0C9C0027E0DB20009D9818 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF0C9C0E27E0DB92009D9818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF41057327E38558009BD8D2 /* TextServiceProtocol.swift in Sources */,
+				FF0C9C1927E0DB92009D9818 /* main.swift in Sources */,
+				FF41057227E38555009BD8D2 /* TextServiceDelegate.swift in Sources */,
+				FF0C9C1727E0DB92009D9818 /* TextService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF0C9C1C27E0DB92009D9818 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF0C9C1127E0DB92009D9818 /* TextService */;
+			targetProxy = FF0C9C1B27E0DB92009D9818 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FF0C9C0527E0DB21009D9818 /* Main.storyboard */ = {
@@ -319,6 +428,52 @@
 			};
 			name = Release;
 		};
+		FF0C9C1F27E0DB92009D9818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3L398A7UTZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TextService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TextService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boostcamp.S046.TextService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FF0C9C2027E0DB92009D9818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3L398A7UTZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TextService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TextService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boostcamp.S046.TextService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +491,15 @@
 			buildConfigurations = (
 				FF0C9C0C27E0DB21009D9818 /* Debug */,
 				FF0C9C0D27E0DB21009D9818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF0C9C1E27E0DB92009D9818 /* Build configuration list for PBXNativeTarget "TextService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF0C9C1F27E0DB92009D9818 /* Debug */,
+				FF0C9C2027E0DB92009D9818 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
